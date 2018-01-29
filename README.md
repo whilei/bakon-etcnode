@@ -1,14 +1,13 @@
-bakon-etcnode
-Classic Ethereum Geth Node with etc-net-intelligence-api Docker Container
+Classic Ethereum Geth Node with Filebeat
 
-############################################################################################# 
 
-**v.05** - build geth4.2.1 with sputnikVM
+----
 
-docker pull bakon3/etcnode:v.05 
-############################################################################################# 
+```
+docker pull bakon3/etcnode:v.05
+#############################################################################################
 
-**v.04** - Updated to geth 4.2.1 Added --sputnikvm to geth run in gethStart.sh file(remove --sputnikvm for Morden Chain) 
+**v.04** - Updated to geth 4.2.1 Added --sputnikvm to geth run in gethStart.sh file(remove --sputnikvm for Morden Chain)
 
 docker pull bakon3/etcnode:v.04
 
@@ -76,7 +75,7 @@ Example of process.json to display stats on test server:
       "INSTANCE_NAME"   : "<Name to show on stats website>",
       "CONTACT_DETAILS" : "bakon",
       "WS_SERVER"       : "ws://teststats.epool.io/",//test server domain
-      "WS_SECRET"       : "rockonetc",               //test server password  
+      "WS_SECRET"       : "rockonetc",               //test server password
       //"WS_SERVER"     : "ws://rpc.etcstats.net", //live server domain
       //"WS_SECRET"     : "5ceuMix4qSM6APj7QwTPU", //live server password
       "VERBOSITY"       : 2
@@ -94,3 +93,4 @@ To see what Geth is doing in the container you have a two quick choices. You can
 You can connect to the geth javascript console by either entering the container with geth exec and executing geth attach or geth --chain=morden attach for the test server.
 
 To connect to a containers JS console from the Docker host. You can do so by navigating to the containers mounted directory ~/.ethereum-classic/<Foldername> and executing the command geth attach ipc:geth.ipc Note:You need to have Geth installed on your host machine as well
+```
